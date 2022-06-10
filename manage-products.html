@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <!-- font awesome -->
+        <link rel="stylesheet"
+            href="fontawesome-free-6.0.0-web\fontawesome-free-6.0.0-web\css\all.min.css"
+            />
+        <title>Admin product</title>
+        <!-- <link rel="stylesheet" href="css/nav.css"> -->
+        <!--  slider  -->
+        <!--Owl  carousel ---------------   ------- ------------------------------>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+            integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="crossorigin="anonymous"
+            referrerpolicy="no-referrer" />
+        <!-- box icons----------------------------------------------- -->
+        <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css'
+            rel='stylesheet'>
+        <!-- font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Hubballi&display=swap"
+            rel="stylesheet">
+        <!-- icon gg -->
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+            />
+
+        <!-- style content -->
+        <link rel="stylesheet" href="css/manage-products.css">
+        <link rel="stylesheet" href="css/footer.css">
+        <style>
+            .product-add{
+                display: none;
+                position:absolute;
+                background-color: white;
+                z-index:199;
+                margin:0 auto;
+                width:70%;
+                height:500px;
+                top:50%;
+                left:50%;
+                transform:translate(-50%,-50%);
+                overflow:hidden scroll ;
+                padding:20px;
+                border-radius:10px;
+                box-shadow: 0px 0px 10px #000;
+            }
+            .product-add-container {
+                display: flex;
+                flex-direction: column;
+            }
+            .product-add-title {
+                font-size: 25px;
+                font-weight: bold;
+                color: #000;
+                margin-bottom: 20px;
+                display:flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .product-add-container input {
+                width: 100%;
+                height: 40px;
+                border: 1px solid #000;
+                border-radius: 5px;
+                padding-left: 10px;
+                margin-bottom: 20px;
+            }
+            .product-add-container textarea {
+                width: 100%;
+                height: 100px;
+                border: 1px solid #000;
+                border-radius: 5px;
+                padding-left: 10px;
+                margin-bottom: 20px;
+            }
+            .product-add-container button {
+                width: 100%;
+                height: 40px;
+                border: 1px solid #000;
+                border-radius: 5px;
+                background-color: rgb(251, 251, 251);
+                color: rgb(0, 0, 0);
+                font-weight: bold;
+                cursor: pointer;
+                margin-top:15px;
+            }
+            .product-add-container button:hover {
+                background-color: rgba(67, 191, 22, 0.408);
+                color: #000;
+            }
+            .product-add-container button:active {
+                background-color: rgba(47, 182, 27, 0.397);
+                color: #000;
+            }
+            
+            .content-title h6{
+                border: 1px solid #000;
+                cursor: pointer;
+                padding:10px;
+            }
+            .content-title h6:active{
+                background-color: #000;
+                color: #fff;
+            }
+            .product-add-title span{
+                cursor: pointer;
+            }
+            .btn-remove{
+                cursor: pointer;
+                padding:10px;
+                background-color: #fff;
+                font-size: 20px;
+                border:none;
+                border: 1px solid #000;
+            }
+            .btn-remove:active{
+                background-color: rgba(219, 15, 15, 0.404);
+                color: #fff;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-header-logo">
+                    <img src="img/logo.webp" alt="">
+                </div>
+                <div class="sidebar-header-icon">
+                    <span>☰</span>
+                </div>
+            </div>
+            <a class="active" href="manage-products.html">Quản lý sản phẩm</a>
+            <a href="manage-orders.html">Quản lý đơn hàng</a>
+            <a href="manage-customers.html">Quản lý khách hàng</a>
+            <a href="index.html">MDB</a>
+        </div>
+        <div class="container-build">
+            <div class="product-add">
+                <div class="product-add-container">
+                    <div class="product-add-title">
+                        <h1>Thêm sản phẩm</h1>
+                        <span class="material-symbols-outlined
+                            icon-detail">
+                            close
+                        </span>
+                    </div>
+                    <div class="product-add-form">
+                        <div class="product-add-form-container">
+                            <div class="product-add-form-title">
+                                <h2>Thông tin sản phẩm</h2>
+                            </div>
+                            <div class="product-add-form-input">
+                                <label for="product-id">ID</label>
+                                <input type="text" id="product-id" name="product-id" placeholder="ID" readonly style="background-color: #ccc;">
+                            </div>
+                            <div class="product-add-form-input">
+                                <label for="product-name">Tên sản phẩm</label>
+                                <input type="text" name="product-name" id="product-name"
+                                    placeholder="Nhập tên sản phẩm">
+                            </div>
+                            <div class="product-add-form-input">
+                                <label for="product-price">Giá</label>
+                                <input type="text" name="product-price" id="product-price"
+                                    placeholder="Nhập giá sản phẩm">
+                            </div>
+                            <div class="product-add-form-input">
+                                <label for="product-description">Mô tả</label>
+                                <textarea name="product-description" id="product-description"
+                                    placeholder="Nhập mô tả sản phẩm"></textarea>
+                            </div>
+                            <div class="product-add-form-input">
+                                <label for="product-power">Công suất</label>
+                                <input type="text" name="product-power" id="product-power"
+                                    placeholder="Nhập công suất sản phẩm">
+                            </div>
+                            <div class="product-add-form-input">
+                                <label for="product-fuel">Nhiên liệu</label>
+                                <input type="text" name="product-fuel" id="product-fuel"
+                                    placeholder="Nhập loại nhiên liệu">
+                            </div>
+                            <div class="product-add-form-input">
+                                <label for="product-transmission">Bộ phận</label>
+                                <input type="text" name="product-transmission" id="product-transmission"
+                                    placeholder="Nhập loại bộ phận">
+                            </div>
+                            <div class="product-add-form-input">
+                                <label for="product-image">Hình ảnh</label>
+                                <img src="" style="height:60px" alt="product-image-preview" id="product-image-preview">
+                                <input type="file" name="product-image" id="product-image" onChange="img_pathUrl(this)">
+                            </div>
+                        </div>
+                        <div class="product-add-form-button">
+                            <button class="btn btn-cart" name="add-product" id="add-product" onclick="addItem()">Thêm</button>
+                            <button class="btn btn-cart" onclick="updateItem()">Cập nhập</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <div class="content-title" style="display:flex;justify-content:space-between;align-items:center;">
+                    <h2>Quản lý sản phẩm</h2>
+                    <h6>Thêm sản phẩm</h6>
+                </div>
+                <div class="content-table">
+                    <table>
+                        <thead>
+                            <th>STT</th>
+                            <th>Tên sản phẩm</th>
+                            <th>Hình ảnh</th>
+                            <th>Mô tả</th>
+                            <th>Giá</th>
+                            <th>Công suất</th>
+                            <th>Nhiên liệu</th>
+                            <th>Bộ phận</th>
+                            <th>Xóa</th>
+                        </thead>
+                        <tbody class="table-body" id="product-body-list">
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+
+        <script src="node_modules/jquery/dist/jquery.js"></script>
+        <script>
+            $(document).ready(function () {
+                $("#header").load("admin-header.html");
+                $("#footer").load("footer.html");
+            });
+            function img_pathUrl(input){
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        $('#product-image-preview').attr('src', e.target.result);
+                    }
+                    reader.readAsDataURL(input.files[0]);
+                }
+            }
+            // products and products-Storage
+    
+            let dataProducts = `[
+            {
+                "id": 1,
+                "name": "Sản phẩm 1",
+                "price": 100000.00,
+                "power": "1.5",
+                "fuel": "Xăng dầu",
+                "transmission": "Tự động",
+                "description": "Xe đẹp, gọn nhẹ, kiểu dáng sang trọng",
+                "image": "img/iris (1).webp"
+            },
+            {
+                "id": 2,
+                "name": "Sản phẩm 2",
+                "price": 200000.00,
+                "power": "2.0",
+                "fuel": "Xăng dầu",
+                "transmission": "Tự động",
+                "description": "Xe đẹp, gọn nhẹ, kiểu dáng sang trọng",
+                "image": "img/iris (2).webp"
+            },
+            {
+                "id": 3,
+                "name": "Sản phẩm 3",
+                "price": 300000.00,
+                "power": "3.0",
+                "fuel": "Xăng dầu",
+                "transmission": "Tự động",
+                "description": "Xe đẹp, gọn nhẹ, kiểu dáng sang trọng",
+                "image": "img/iris (3).webp"
+            },
+            {
+                "id": 4,
+                "name": "Sản phẩm 4",
+                "price": 400000.00,
+                "power": "4.0",
+                "fuel": "Xăng dầu",
+                "transmission": "Tự động",
+                "description": "Xe đẹp, gọn nhẹ, kiểu dáng sang trọng",
+                "image": "img/iris (4).webp"
+            },
+            {
+                "id": 5,
+                "name": "Sản phẩm 5",
+                "price": 500000.00,
+                "power": "5.0",
+                "fuel": "Xăng dầu",
+                "transmission": "Tự động",
+                "description": "Xe đẹp, gọn nhẹ, kiểu dáng sang trọng",
+                "image": "img/iris (5).webp"
+            },
+            {
+                "id": 6,
+                "name": "Sản phẩm 6",
+                "price": 600000.00,
+                "power": "6.0",
+                "fuel": "Xăng dầu",
+                "transmission": "Tự động",
+                "description": "Xe đẹp, gọn nhẹ, kiểu dáng sang trọng",
+                "image": "img/iris (6).webp"
+            },
+            {
+                "id": 7,
+                "name": "Sản phẩm 7",
+                "price": 700000.00,
+                "power": "7.0",
+                "fuel": "Xăng dầu",
+                "transmission": "Tự động",
+                "description": "Xe đẹp, gọn nhẹ, kiểu dáng sang trọng",
+                "image": "img/iris (7).webp"
+            },
+            {
+                "id": 8,
+                "name": "Sản phẩm 8",
+                "price": 800000.00,
+                "power": "8.0",
+                "fuel": "Xăng dầu",
+                "transmission": "Tự động",
+                "description": "Xe đẹp, gọn nhẹ, kiểu dáng sang trọng",
+                "image": "img/iris (8).webp"
+            },
+            {
+                "id": 9,
+                "name": "Sản phẩm 9",
+                "price": 900000.00,
+                "power": "9.0",
+                "fuel": "Xăng dầu",
+                "transmission": "Tự động",
+                "description": "Xe đẹp, gọn nhẹ, kiểu dáng sang trọng",
+                "image": "img/iris (9).webp"
+            },
+            {
+                "id": 10,
+                "name": "Sản phẩm 10",
+                "price": 1000000.00,
+                "power": "10.0",
+                "fuel": "Xăng dầu",
+                "transmission": "Tự động",
+                "description": "Xe đẹp, gọn nhẹ, kiểu dáng sang trọng",
+                "image": "img/iris (10).webp"
+            },
+            {
+                "id": 11,
+                "name": "Sản phẩm 11",
+                "price": 1100000.00,
+                "power": "11.0",
+                "fuel": "Xăng dầu",
+                "transmission": "Tự động",
+                "description": "Xe đẹp, gọn nhẹ, kiểu dáng sang trọng",
+                "image": "img/iris (11).webp"
+            },
+            {
+                "id": 12,
+                "name": "Sản phẩm 12",
+                "price": 1200000.00,
+                "power": "12.0",
+                "fuel": "Xăng dầu",
+                "transmission": "Tự động",
+                "description": "Xe đẹp, gọn nhẹ, kiểu dáng sang trọng",
+                "image": "img/iris (12).webp"
+            },
+            {
+                "id": 13,
+                "name": "Sản phẩm 13",
+                "price": 1300000.00,
+                "power": "13.0",
+                "fuel": "Xăng dầu",
+                "transmission": "Tự động",
+                "description": "Xe đẹp, gọn nhẹ, kiểu dáng sang trọng",
+                "image": "img/iris (13).webp"
+            },
+            {
+                "id": 14,
+                "name": "Sản phẩm 14",
+                "price": 1400000.00,
+                "power": "14.0",
+                "fuel": "Xăng dầu",
+                "transmission": "Tự động",
+                "description": "Xe đẹp, gọn nhẹ, kiểu dáng sang trọng",
+                "image": "img/iris (14).webp"
+            },
+            {
+                "id": 15,
+                "name": "Sản phẩm 15",
+                "price": 1500000.00,
+                "power": "15.0",
+                "fuel": "Xăng dầu",
+                "transmission": "Tự động",
+                "description": "Xe đẹp, gọn nhẹ, kiểu dáng sang trọng",
+                "image": "img/iris (15).webp"
+            },
+            {
+                "id": 16,
+                "name": "Sản phẩm 16",
+                "price": 1600000.00,
+                "power": "16.0",
+                "fuel": "Xăng dầu",
+                "transmission": "Tự động",
+                "description": "Xe đẹp, gọn nhẹ, kiểu dáng sang trọng",
+                "image": "img/iris (16).webp"
+            } 
+        ]`;
+
+            let products;
+            if (localStorage.getItem("products") === null) {
+                products = JSON.parse(dataProducts);
+                localStorage.setItem("products", JSON.stringify(products));
+            }
+            else {
+                products = JSON.parse(localStorage.getItem("products"));
+            }
+            // products-list
+            function displayProducts() {
+                let html = "";
+                for (let i = 0; i < products.length; i++) {
+                    html += `
+                    <tr id="${products[i].id}" onclick="getItem(${products[i].id})">
+                        <td>${products[i].id}</td>
+                        <td>${products[i].name}</td>
+                        <td><img src="${products[i].image}" alt="${products[i].name}" height="40"></td>
+                        <td>${products[i].description}</td>
+                        <td>$${products[i].price}</td>
+                        <td>${products[i].power}</td>
+                        <td>${products[i].fuel}</td>
+                        <td>${products[i].transmission}</td>
+                        <td><button class="btn btn-cart btn-remove" onclick="removeItem(${products[i].id})">Remove</button></td>
+                    </tr>
+                    `;
+                }
+                $("#product-body-list").html(html);
+            }
+            displayProducts();
+            // edit product local storage
+            var storageKey = "products";
+    
+            var product = {
+                "id": 1,
+                "name": "Product 1",
+                "price": 100000.00,
+                "power": "1.5",
+                "fuel": "Petrol",
+                "transmission": "Automatic",
+                "description": "This is a product description",
+                "image": "img/iris (1).webp"
+            };
+
+    
+    
+            function addItem() {
+                let product = {
+                    "id": products.length + 1,
+                    "name": $("#product-name").val(),
+                    "price": $("#product-price").val(),
+                    "description": $("#product-description").val(),
+                    "image": $("#product-image-preview").attr("src"),
+                    "power": $("#product-power").val(),
+                    "fuel": $("#product-fuel").val(),
+                    "transmission": $("#product-transmission").val()
+                };
+                console.log(product.image);
+                products.push(product);
+                localStorage.setItem(storageKey, JSON.stringify(products));
+                displayProducts();
+            }
+    
+            function getItem(id) {
+                let product = products.find(product => product.id == id);
+                $("#product-id").val(product.id);
+                $("#product-name").val(product.name);
+                $("#product-price").val(product.price);
+                $("#product-description").val(product.description);
+                $("#product-image-preview").attr("src", product.image);
+                $("#product-power").val(product.power);
+                $("#product-fuel").val(product.fuel);
+                $("#product-transmission").val(product.transmission);
+
+            }
+    
+            function resetIdProducts() {
+    
+            }
+    
+            function updateItem() {
+                let id = $("#product-id").val();
+                let product = products.find(product => product.id == id);
+                product.name = $("#product-name").val();
+                product.price = $("#product-price").val();
+                product.description = $("#product-description").val();
+                product.image = $("#product-image-preview").attr("src");
+                product.power = $("#product-power").val();
+                product.fuel = $("#product-fuel").val();
+                product.transmission = $("#product-transmission").val();
+                localStorage.setItem(storageKey, JSON.stringify(products));
+                displayProducts();
+            }
+    
+            function removeItem(id) {
+                let item = products.find(function (item) {
+                    return item.id == id;
+                });
+                products.splice(products.indexOf(item), 1);
+                localStorage.setItem(storageKey, JSON.stringify(products));
+                displayProducts();
+            }
+    
+            displayProducts();
+    
+    
+        </script>
+
+        <!-- owl carousel------------------------------------------------------->
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+            integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="crossorigin="anonymous"
+            referrerpolicy="no-referrer"></script>
+        <!-- boxicons -->
+        <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+        <script src="js/clicked.js"></script>
+    </body>
+</html>

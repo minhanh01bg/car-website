@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="fontawesome-free-6.0.0-web\fontawesome-free-6.0.0-web\css\all.min.css" />
+    <title>Buy online</title>
+    <link rel="stylesheet" href="css/nav.css">
+    <!--  slider  -->
+    <!--Owl  carousel ---------------   ------- ------------------------------>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- box icons----------------------------------------------- -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hubballi&display=swap" rel="stylesheet">
+    <!-- icon gg -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <!-- style content -->
+    <!-- <link rel="stylesheet" href="css/content-index.css"> -->
+    <link rel="stylesheet" href="css/buyonline.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+
+<body>
+    <nav id="header">
+
+    </nav>
+    <!-- top up and message with server ------------------------>
+    <div class="top-up">
+        <span class="material-symbols-outlined top-up-icon">
+            arrow_upward
+        </span>
+    </div>
+    <!-- end top up -->
+    <div class="container-build">
+        <div class="content-header">
+            <div class="content-header-title">
+                <span>Showroom trực tuyến: tìm kiếm xe và nhận báo giá</span>
+            </div>
+        </div>
+        <div class="content-des">
+            <div class="content-filter">
+                <!-- item -->
+                <div class="content-filter-item">
+                    <div class="content-filter-label">
+                        <span>Dòng xe</span>
+                    </div>
+                    <div class="content-filter-feature">
+                        <span>A-CLASS</span>
+                        <span>B-CLASS</span>
+                        <span>C-CLASS</span>
+                        <span>D-CLASS</span>
+                    </div>
+                </div>
+                <!-- item -->
+                <div class="content-filter-item">
+                    <div class="content-filter-label">
+                        <span>Loại xe</span>
+                    </div>
+                    <div class="content-filter-feature">
+                        <div class="content-filter-feature-img-label">
+                            <img src="img/filter/Thiết kế chưa có tên.png" alt="">
+                            <div>Gọn nhẹ</div>
+                        </div>
+                        <div class="content-filter-feature-img-label">
+                            <img src="img/filter/Thiết kế chưa có tên (1).png" alt="">
+                            <div>Xe địa hình</div>
+                        </div>
+                        <div class="content-filter-feature-img-label">
+                            <img src="img/filter/Thiết kế chưa có tên (2).png" alt="">
+                            <div>Sedan</div>
+                        </div>
+                        <div class="content-filter-feature-img-label">
+                            <img src="img/filter/Thiết kế chưa có tên (3).png" alt="">
+                            <div>SUV</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- item -->
+                <div class="content-filter-item">
+                    <div class="content-filter-label">
+                        <span>Màu</span>
+                    </div>
+                    <div class="content-filter-feature">
+                        <span>Đen</span>
+                        <span>Trắng</span>
+                        <span>Đỏ</span>
+                        <span>Xanh biển</span>
+                        <span>Xám</span>
+                    </div>
+                </div>
+                <!-- item -->
+                <div class="content-filter-item">
+                    <div class="content-filter-label">
+                        <span>Công suất</span>
+                    </div>
+                    <div class="content-filter-feature">
+                        <input type="text" placeholder="Công suất....">
+                    </div>
+                </div>
+                <!-- item -->
+                <div class="content-filter-item">
+                    <div class="content-filter-label">
+                        <span>Giá</span>
+                    </div>
+                    <div class="content-filter-feature">
+                        <input type="text" placeholder="Từ....">
+                        <input type="text" placeholder="Đến....">
+                    </div>
+                </div>
+                <!-- item -->
+                <div class="content-filter-item">
+                    <div class="content-filter-label">
+                        <span>Loại nhiên liệu</span>
+                    </div>
+                    <div class="content-filter-feature">
+                        <span>Xăng dầu</span>
+                    </div>
+                </div>
+                <!-- item -->
+                <div class="content-filter-item">
+                    <div class="content-filter-label">
+                        <span>Bộ phận</span>
+                    </div>
+                    <div class="content-filter-feature">
+                        <span>Tự động</span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="product-body-list" class="content-filter display_flex">
+                <!-- content-item -->
+
+            </div>
+        </div>
+    </div>
+
+    <div class="margin_top style-for-footer">
+        
+    </div>
+
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+
+    <!-- owl carousel------------------------------------------------------->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- boxicons -->
+    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/clicked.js"></script>
+    <script>
+        // products and products-Storage
+
+        let dataProducts = `[
+            {
+                "id": 1,
+                "name": "Sản phẩm 1",
+                "price": 100000.00,
+                "power": "1.5",
+                "fuel": "Xăng dầu",
+                "transmission": "Tự động",
+                "description": "Xe đẹp, gọn nhẹ, kiểu dáng sang trọng",
+                "image": "img/iris (1).webp"
+            },
+            {
+                "id": 2,
+                "name": "Sản phẩm 2",
+                "price": 200000.00,
+                "power": "2.0",
+                "fuel": "Xăng dầu",
+                "transmission": "Tự động",
+                "description": "Xe đẹp, gọn nhẹ, kiểu dáng sang trọng",
+                "image": "img/iris (2).webp"
+            },
+            {
+                "id": 3,
+                "name": "Sản phẩm 3",
+                "price": 300000.00,
+                "power": "3.0",
+                "fuel": "Xăng dầu",
+                "transmission": "Tự động",
+                "description": "Xe đẹp, gọn nhẹ, kiểu dáng sang trọng",
+                "image": "img/iris (3).webp"
+            },
+            {
+                "id": 4,
+                "name": "Sản phẩm 4",
+                "price": 400000.00,
+                "power": "4.0",
+                "fuel": "Xăng dầu",
+                "transmission": "Tự động",
+                "description": "Xe đẹp, gọn nhẹ, kiểu dáng sang trọng",
+                "image": "img/iris (4).webp"
+            },
+            {
+                "id": 5,
+                "name": "Sản phẩm 5",
+                "price": 500000.00,
+                "power": "5.0",
+                "fuel": "Xăng dầu",
+                "transmission": "Tự động",
+                "description": "Xe đẹp, gọn nhẹ, kiểu dáng sang trọng",
+                "image": "img/iris (5).webp"
+            },
+            {
+                "id": 6,
+                "name": "Sản phẩm 6",
+                "price": 600000.00,
+                "power": "6.0",
+                "fuel": "Xăng dầu",
+                "transmission": "Tự động",
+                "description": "Xe đẹp, gọn nhẹ, kiểu dáng sang trọng",
+                "image": "img/iris (6).webp"
+            },
+            {
+                "id": 7,
+                "name": "Sản phẩm 7",
+                "price": 700000.00,
+                "power": "7.0",
+                "fuel": "Xăng dầu",
+                "transmission": "Tự động",
+                "description": "Xe đẹp, gọn nhẹ, kiểu dáng sang trọng",
+                "image": "img/iris (7).webp"
+            },
+            {
+                "id": 8,
+                "name": "Sản phẩm 8",
+                "price": 800000.00,
+                "power": "8.0",
+                "fuel": "Xăng dầu",
+                "transmission": "Tự động",
+                "description": "Xe đẹp, gọn nhẹ, kiểu dáng sang trọng",
+                "image": "img/iris (8).webp"
+            },
+            {
+                "id": 9,
+                "name": "Sản phẩm 9",
+                "price": 900000.00,
+                "power": "9.0",
+                "fuel": "Xăng dầu",
+                "transmission": "Tự động",
+                "description": "Xe đẹp, gọn nhẹ, kiểu dáng sang trọng",
+                "image": "img/iris (9).webp"
+            },
+            {
+                "id": 10,
+                "name": "Sản phẩm 10",
+                "price": 1000000.00,
+                "power": "10.0",
+                "fuel": "Xăng dầu",
+                "transmission": "Tự động",
+                "description": "Xe đẹp, gọn nhẹ, kiểu dáng sang trọng",
+                "image": "img/iris (10).webp"
+            },
+            {
+                "id": 11,
+                "name": "Sản phẩm 11",
+                "price": 1100000.00,
+                "power": "11.0",
+                "fuel": "Xăng dầu",
+                "transmission": "Tự động",
+                "description": "Xe đẹp, gọn nhẹ, kiểu dáng sang trọng",
+                "image": "img/iris (11).webp"
+            },
+            {
+                "id": 12,
+                "name": "Sản phẩm 12",
+                "price": 1200000.00,
+                "power": "12.0",
+                "fuel": "Xăng dầu",
+                "transmission": "Tự động",
+                "description": "Xe đẹp, gọn nhẹ, kiểu dáng sang trọng",
+                "image": "img/iris (12).webp"
+            },
+            {
+                "id": 13,
+                "name": "Sản phẩm 13",
+                "price": 1300000.00,
+                "power": "13.0",
+                "fuel": "Xăng dầu",
+                "transmission": "Tự động",
+                "description": "Xe đẹp, gọn nhẹ, kiểu dáng sang trọng",
+                "image": "img/iris (13).webp"
+            },
+            {
+                "id": 14,
+                "name": "Sản phẩm 14",
+                "price": 1400000.00,
+                "power": "14.0",
+                "fuel": "Xăng dầu",
+                "transmission": "Tự động",
+                "description": "Xe đẹp, gọn nhẹ, kiểu dáng sang trọng",
+                "image": "img/iris (14).webp"
+            },
+            {
+                "id": 15,
+                "name": "Sản phẩm 15",
+                "price": 1500000.00,
+                "power": "15.0",
+                "fuel": "Xăng dầu",
+                "transmission": "Tự động",
+                "description": "Xe đẹp, gọn nhẹ, kiểu dáng sang trọng",
+                "image": "img/iris (15).webp"
+            },
+            {
+                "id": 16,
+                "name": "Sản phẩm 16",
+                "price": 1600000.00,
+                "power": "16.0",
+                "fuel": "Xăng dầu",
+                "transmission": "Tự động",
+                "description": "Xe đẹp, gọn nhẹ, kiểu dáng sang trọng",
+                "image": "img/iris (16).webp"
+            } 
+        ]`;
+
+        let products = JSON.parse(dataProducts);
+
+        console.log(products);
+        function displayProducts() {
+            let html = "";
+            for (let i = 0; i < products.length; i++) {
+                html += `
+                    <div id="${products[i].id}" class="content-item">
+                        <div class="content-item-img">
+                            <img src="${products[i].image}" alt="">
+                        </div>
+                        <div class="content-item-info">
+                            <div class="content-item-info-title">
+                                <span>${products[i].name}</span>
+                            </div>
+                            <div class="content-item-info-price">
+                                <span>Giá:</span>
+                                <span>${products[i].price}đ</span>
+                            </div>
+                            <div class="content-item-info-feature">
+                                <div class="content-item-info-feature-item">
+                                    <span>Công suất:</span>
+                                    <span>${products[i].power}</span>
+                                </div>
+                                <div class="content-item-info-feature-item">
+                                    <span>Loại nhiên liệu:</span>
+                                    <span>${products[i].fuel}</span>
+                                </div>
+                                <div class="content-item-info-feature-item">
+                                    <span>Bộ phận:</span>
+                                    <span>${products[i].transmission}</span>
+                                </div>
+                                <div class="content-item-info-feature-item margin_top_top">
+                                    <span class="button" onclick="addItem(${products[i].id})">Mua ngay</span>
+                                    <span class="button" onclick="viewProduct(${products[i].id})">Xem thêm</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+            $("#product-body-list").html(html);
+        }
+
+        displayProducts();
+
+        // view 1 product
+        var storageKeyProducts = "products";
+        localStorage.setItem(storageKeyProducts, JSON.stringify(products));
+
+        var storageKeyViewProduct = "viewProduct";
+
+        function viewProduct(id) {
+            for (let i = 0; i < products.length; i++) {
+                if (products[i].id == id) {
+                    localStorage.setItem(storageKeyViewProduct, JSON.stringify(products[i]));
+                }
+            }
+            window.location.href = "product-detail.html";
+        }
+
+
+        // cart local storage
+        var storageKey = "cart";
+        var cart = [];
+
+        var cartItem = {
+            "id": "1",
+            "idProduct": "1",
+            "name": "Product 1",
+            "price": "100000.00",
+            "image": "img/iris (1).webp",
+            "power": "1.0",
+            "fuel": "Xăng dầu",
+            "transmission": "Tự động",
+            "quantity": "1"
+        };
+
+
+        function addItem(id) {
+            var cart = JSON.parse(localStorage.getItem(storageKey));
+            if (cart == null) {
+                cart = [];
+                cartItem.id = "1";
+            }
+            else {
+                cartItem.id = cart.length + 1;
+            }
+            let item = products.find(function (item) {
+                return item.id == id;
+            });
+            cartItem.idProduct = item.id;
+            cartItem.name = item.name;
+            cartItem.price = item.price;
+            cartItem.image = item.image;
+            cartItem.power = item.power;
+            cartItem.fuel = item.fuel;
+            cartItem.transmission = item.transmission;
+            cartItem.quantity = 1;
+            cart.push(cartItem);
+            localStorage.setItem(storageKey, JSON.stringify(cart));
+            console.log(localStorage.getItem(storageKey));
+            cartHeader();
+            showCart();
+        }
+
+        function resetIdCart() {
+            var cart = JSON.parse(localStorage.getItem(storageKey));
+            if (cart == null) {
+                cart = [];
+            }
+            else {
+                for (let i = 0; i < cart.length; i++) {
+                    cart[i].id = i + 1;
+                }
+            }
+            localStorage.setItem(storageKey, JSON.stringify(cart));
+        }
+
+        function showCart() {
+            resetIdCart();
+            var cart = JSON.parse(localStorage.getItem(storageKey));
+            if (cart == null) {
+                cart = [];
+            }
+            var cartList = $("#cart");
+            cartList.empty();
+            var total = 0;
+            for (var i = 0; i < cart.length; i++) {
+                var item = cart[i];
+                var itemHtml =
+                    `<tr>
+                        <td>${item.id}</td>
+                        <td>${item.name}</td>
+                        <td><img src="${item.image}" height="40" alt=""></td>
+                        <td>${item.price}</td>
+                        <td>${item.power}</td>
+                        <td>${item.fuel}</td>
+                        <td>${item.transmission}</td>
+                        <td>
+                            <input id="cart${item.id}" type="number" value="${item.quantity}">
+                        </td>
+                        <td>${item.price * item.quantity}</td>
+                        <td><button onclick="updateItem(${item.id})">Cập nhật</button></td>
+                        <td><button onclick="removeItem(${item.id})">Xóa</button></td>
+                        </tr>`;
+                cartList.append(itemHtml);
+                total += parseInt(item.price) * parseInt(item.quantity);
+            }
+            $("#cart-total").html(`<h3>Tổng: $${total}</h3>`);
+        }
+
+        function updateItem(id) {
+            var cart = JSON.parse(localStorage.getItem(storageKey));
+            var quantity = $("#cart" + id).val();
+            for (var i = 0; i < cart.length; i++) {
+                if (cart[i].id == id) {
+                    cart[i].quantity = quantity;
+                }
+            }
+            localStorage.setItem(storageKey, JSON.stringify(cart));
+            showCart();
+        }
+
+        function removeItem(id) {
+            var cart = JSON.parse(localStorage.getItem(storageKey));
+            for (var i = 0; i < cart.length; i++) {
+                if (cart[i].id == id) {
+                    cart.splice(i, 1);
+                    break;
+                }
+            }
+            localStorage.setItem(storageKey, JSON.stringify(cart));
+            cartHeader();
+            showCart();
+        }
+
+        function clearCart() {
+            localStorage.removeItem(storageKey);
+            showCart();
+            cartHeader();
+        }
+
+        function cartHeader() {
+            var cart = localStorage.getItem(storageKey);
+            if (cart) {
+                cart = JSON.parse(cart);
+                var cartTotal = 0;
+                for (var i = 0; i < cart.length; i++) {
+                    cartTotal += cart[i].quantity * cart[i].price;
+                }
+                $("#cart-count").text("Cart(" + cart.length + ")");
+                $("#cart-total").text("/ $" + cartTotal);
+            }
+            $("#cart-mini").show();
+            $("#cart-mini").css("display", "flex");
+            $("#cart-mini").css("opacity", "1");
+            $("#cart-mini").css("transition", "all 0.5s ease-in-out");
+        }
+
+        showCart();
+    </script>
+    <script>
+        $(document).ready(()=>{
+            $("#header").load("header.html");
+            $(".style-for-footer").load("footer.html");
+        })
+        
+    </script>
+</body>
+
+</html>

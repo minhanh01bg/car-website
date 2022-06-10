@@ -1,0 +1,175 @@
+    <ul class="nav nav-tabs nav-justified">
+        <span class="hamburger"><i class="fa-solid fa-bars"></i></span>
+        <div class="content-nav">
+            <li class="contain-logo">
+                <div class="logo">
+                    <img src="img/logo.webp" alt="">
+                </div>
+            </li>
+            <li class="contain-body hover-contain-body">
+                <a href="Allmodels.html">Tất cả các loại xe</a>
+                <div class="container-models">
+                    <div class="content-models">
+                        <a href="" class="">Dòng A</a>
+                    </div>
+                    <div class="content-models">
+                        <a href="" class="">Dòng B</a>
+                    </div>
+                </div>
+            </li>
+            <li class="contain-body"><a href="buyonline.html">Mua ngay</a></li>
+            <li class="contain-body"><a href="">Tư vấn</a></li>
+            <li class="contain-body"><a href="">Chăm sóc khách hàng</a></li>
+            <li class="contain-body"><a href="">MDB</a></li>
+        </div>
+        <div class="content-info">
+            <li class="icon-func">
+                <div class="search">
+                    <input type="text" class="input-search"
+                        placeholder="Tìm kiếm...">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </li>
+            <!-- <li class="icon-func"><i class="fa-solid fa-comment"></i></li> -->
+            <li class="icon-func"><i class="fa-solid fa-cart-shopping"></i></li>
+            <li class="icon-func"><i class="fa-solid fa-heart"></i></li>
+            <li class="icon-func hover-notify">
+                <i class="fa-solid fa-bell"></i>
+                <div class="info-notify">
+                    <!-- item  -->
+                    <div class="info-notify-item">
+                        <div class="info-notify-img">
+                            <img src="img/employee/mostbeautiful.webp"
+                                alt="">
+                        </div>
+                        <div class="info-notify-description">
+                            <span>Bạn cần gì?</span>
+                        </div>
+                    </div>
+                    <!-- item  -->
+                    <div class="info-notify-item">
+                        <div class="info-notify-img">
+                            <img src="img/iris (1).webp" alt="">
+                        </div>
+                        <div class="info-notify-description">
+                            <span>Bạn cần gì?</span>
+                        </div>
+                    </div>
+                    <!-- item  -->
+                    <div class="info-notify-item">
+                        <div class="info-notify-img">
+                            <img src="img/iris (1).webp" alt="">
+                        </div>
+                        <div class="info-notify-description">
+                            <span>Bạn cần gì?</span>
+                        </div>
+                    </div>
+                    <!-- item  -->
+                    <div class="info-notify-item">
+                        <div class="info-notify-img">
+                            <img src="img/employee/mostbeautiful.webp"
+                                alt="">
+                        </div>
+                        <div class="info-notify-description">
+                            <span>Bạn cần gì?</span>
+                        </div>
+                    </div>
+                    <!-- item  -->
+                    <div class="info-notify-item">
+                        <div class="info-notify-img">
+                            <img src="img/employee/mostbeautiful.webp"
+                                alt="">
+                        </div>
+                        <div class="info-notify-description">
+                            <span>Bạn cần gì?</span>
+                        </div>
+                    </div>
+                    <!-- item  -->
+                    <div class="info-notify-item">
+                        <div class="info-notify-img">
+                            <img src="img/employee/mostbeautiful.webp"
+                                alt="">
+                        </div>
+                        <div class="info-notify-description">
+                            <span>Bạn cần gì?</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="icon-func hover-info-user">
+                <div class="info-user">
+                    <img src="img/iris (1).webp" alt="">
+                </div>
+                <div class="info-user-content">
+                    <div class="info-user-content-detail">
+                        <span class="material-symbols-outlined
+                            icon-detail">person</span>
+                        <span>Thông tin</span>
+                    </div>
+                    <div class="info-user-content-detail" onclick="location.href='manage-products.html';">
+                        <span class="material-symbols-outlined
+                            icon-detail">
+                            exit_to_app
+                        </span>
+                        <span>Quản lý</span>
+                    </div>
+                    <div class="info-user-content-detail">
+                        <span class="material-symbols-outlined
+                            icon-detail">
+                            settings
+                        </span>
+                        <span>Cài đặt</span>
+                    </div>
+                    <div class="info-user-content-detail click-log-in">
+                        <span class="material-symbols-outlined
+                            icon-detail">
+                            logout
+                        </span>
+                        <span>Đăng xuất</span>
+                    </div>
+                    <!-- 
+                    <div class="info-user-content-detail">
+                        <span class="material-symbols-outlined
+                            icon-detail">
+                            close
+                        </span>
+                        <span>Cancel</span>
+                    </div> -->
+                </div>
+            </li>
+        </div>
+    </ul>
+<script>
+    $(".click-log-in").click(function(){
+        location.href="login.html";
+    })
+    $(".logo").click(()=>{
+        location.href = "index.html";
+    })
+    $(".fa-cart-shopping").click(()=>{
+        location.href="cart.html";
+    });
+    $(".click-continue-shop").click(function(){
+        location.href="buyonline.html";
+    })
+    $(".hamburger").click(function () {
+        if ($(".content-nav").css("visibility") == "hidden") {
+            $(".content-nav").css({ "visibility": "visible" });
+            if ($(".content-nav").hasClass("hover-content-nav") == false) {
+                $(".content-nav").toggleClass("hover-content-nav");
+            } else {
+                $(".content-nav").removeClass("hover-content-nav");
+            }
+            $(".hamburger").html(`<i class="fa-solid fa-xmark"></i>`);
+        }
+        else {
+            $(".content-nav").css({ "visibility": "hidden" });
+            if ($(".content-nav").hasClass("hover-content-nav") == false) {
+                $(".content-nav").toggleClass("hover-content-nav");
+            } else {
+                $(".content-nav").removeClass("hover-content-nav");
+            }
+            $(".hamburger").html(`<i class="fa-solid fa-bars"></i>`);
+        }
+    })
+</script>
